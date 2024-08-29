@@ -1,38 +1,61 @@
 # VISHLESHNAM-Video-Analytics-for-Crowd-Behaviour-Analysis
-VISHLESHNAM is an advanced video analytics solution for crowd behaviour analysis using multiple sensors. This project is developed at IIT Bhubaneswar, funded by IRDE Dehradun, DRDO.
-Objectives
 
-Develop AI algorithms to detect suspicious activities of intruders targeting women in various environments.
-Create AI-driven methodologies for automatic alarm generation to assist women in distress.
-Implement vehicle surveillance to detect non-standard or improperly installed number plates within restricted zones.
-Develop deep learning models for crowd analysis, including counting males and females and analyzing activities.
+## Project Overview
 
-Repository Contents
+VISHLESHNAM is an advanced video analytics solution for crowd behaviour analysis using multiple sensors. This project aims to develop AI-driven methodologies for detecting suspicious activities, analyzing crowd demographics, and enhancing security measures in various environments.
 
-main.py: Core script for video processing, object detection, and database integration.
-tracker.py: Implementation of object tracking algorithm.
-website.html: Frontend for the project website, including visualizations and user interface.
+### Key Features
 
-Setup and Installation
+- AI-based detection of suspicious activities targeting women
+- Automatic alarm generation for assisting women in distress
+- Vehicle surveillance for detecting non-standard or improperly installed number plates
+- Crowd analysis including male/female counting and activity analysis.
 
-Clone the repository:
-Copygit clone https://github.com/your-username/vishleshnam.git
+## Technical Stack
 
-Install required dependencies:
-Copypip install -r requirements.txt
+- **Backend:**
+  - Python
+  - OpenCV (cv2)
+  - YOLO (Ultralytics)
+  - MySQL
+  - pHp
+- **Frontend:**
+  - HTML
+  - JavaScript
+  - CSS
 
-Set up the MySQL database as configured in main.py.
-Download required model files:
+## Setup and Installation
 
-YOLO model: yolov8s.pt
-Age and gender models: age_deploy.prototxt, age_net.caffemodel, gender_deploy.prototxt, gender_net.caffemodel
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/vishleshnam.git
+   ```
+
+2. Install the required Python packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Set up the MySQL database:
+   - Create a database named `iitbbsr`
+   - Update the database connection details in `main.py`
+
+4. Download the required model files:
+   - YOLO model: `yolov8s.pt`
+   - Age and Gender models: `age_deploy.prototxt`, `age_net.caffemodel`, `gender_deploy.prototxt`, `gender_net.caffemodel`
+
+5. Run the main script:
+   ```
+   python main.py
+   ```
+
+6. Open `website.html` in a web browser to view the frontend interface.
+
+## Project Structure
+
+- `main.py`: Main script for video processing and analysis
+- `tracker.py`: Object tracking implementation
+- `website.html`: Frontend interface
+- `coco.txt`: COCO dataset class list
 
 
-Run the main script:
-Copypython main.py
-
-
-Usage
-The system processes video input, detecting and tracking individuals, estimating age and gender, and storing the data in a MySQL database. The web interface (website.html) provides visualizations and analysis of the collected data.
-Contributing
-We welcome contributions to the VISHLESHNAM project. Please read our contributing guidelines before submitting pull requests
